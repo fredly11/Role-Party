@@ -1,7 +1,7 @@
 import Room from './Room'
 import AddRoom from './AddRoom'
 
-const Rooms = ({rooms, activeRoom, users}) => {
+const Rooms = ({rooms, activeRoom, users, addText, setAddText, onAddRoom}) => {
     return (
 <>
     <div className='sidebar-container'>
@@ -13,9 +13,9 @@ const Rooms = ({rooms, activeRoom, users}) => {
                     {room.name}
                  </div>
         ))} 
-        <AddRoom />
+        <AddRoom  addText={addText} setAddText={setAddText} onAddRoom={onAddRoom}/>
     </div>   
-        <Room  room={rooms[activeRoom]} users={users} />
+        <Room room={rooms[activeRoom]} users={users} />
 </>
     )
 }
