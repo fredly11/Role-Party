@@ -1,6 +1,5 @@
 import Rooms from './Room Layer/Rooms'
 
-
 const Party = ({party, users}) => {
     return (
         <>

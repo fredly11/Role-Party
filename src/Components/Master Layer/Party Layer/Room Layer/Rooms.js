@@ -1,4 +1,5 @@
 import Room from './Room'
+import AddRoom from './AddRoom'
 
 const Rooms = ({rooms, activeRoom, users}) => {
     return (
@@ -12,6 +13,7 @@ const Rooms = ({rooms, activeRoom, users}) => {
                     {room.name}
                  </div>
         ))} 
+        <AddRoom />
     </div>   
         <Room  room={rooms[activeRoom]} users={users} />
 </>

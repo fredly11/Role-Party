@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Users = ({users}) => {
     return (
         <div className='users-container'>

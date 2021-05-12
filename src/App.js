@@ -2,9 +2,9 @@ import Parties from './Components/Master Layer/Party Layer/Parties'
 import Header from './Components/Master Layer/Header'
 import icon1 from './icon1.png'
 import icon2 from './icon2.png'
+import { useState } from 'react'
 
 function App() {
-
   const parties = [
     {
       id: 1,
@@ -108,7 +108,7 @@ function App() {
       id: 2,
       name: 'Blarg',
       icon: <img src={icon2} />,
-      activeRoom: 1,
+      activeRoom: 3,
       users: [
         {
           id: 1,
@@ -188,13 +188,13 @@ function App() {
         messages: [
             {
             id: 1,
-            user: 'Obi-Wan Kenobi',
+            user: 'Obi-Wan Bronobi',
             timestamp: '5/9/2021',
             text: 'Hello there!'
             }, 
             {
             id: 2,
-            user: 'General Grievous',
+            user: 'General Grifter',
             timestamp: '5/9/2021',
             text: 'General Kenobi!!'
             }
@@ -203,12 +203,11 @@ function App() {
     ]
     }
   ]
-
   const activeParty = 1;
-  const activeRoom = 1;
+
   return (
     <div className='parent-container'>
-      <Header party={parties[activeParty]} activeRoom={activeRoom}/>
+      <Header party={parties[activeParty]} activeRoom={parties[activeParty].activeRoom}/>
       <Parties key={parties.id} parties={parties} activeParty={activeParty} />
     </div>
   );
