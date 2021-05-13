@@ -4,13 +4,12 @@ import { useState } from 'react'
 const Party = ({party, users}) => {
     const [addText, setAddText] = useState('') 
     const [rooms, setRooms] = useState(party.rooms)
-
+    
     const addRoom = () => {
         const id = rooms.length + 1
         const messages = []
         const newRoom = {id, name: addText, messages}
         setRooms([...rooms, newRoom])
-
     }
 
 

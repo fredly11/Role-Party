@@ -5,6 +5,9 @@ const Parties = ({parties, activeParty, setActiveParty}) => {
         setActiveParty(newParty-1)
       }
 
+
+      
+
     return (
 <>
 
@@ -17,7 +20,7 @@ const Parties = ({parties, activeParty, setActiveParty}) => {
                  </div>
         ))} 
     </div>   
-        <Party party={parties[activeParty]} users={parties[activeParty].users} />
+        <Party key={parties[activeParty].id} party={parties[activeParty]} users={parties[activeParty].users} />
 </>
     )
 }

@@ -205,7 +205,7 @@ function App() {
     }
   ]
 
-  console.log(activeParty)
+  //console.log(activeParty)
 
   return (
     <div className='parent-container'>
