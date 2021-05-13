@@ -9,7 +9,7 @@ const Rooms = ({rooms, activeRoom, users, addText, setAddText, onAddRoom}) => {
             Rooms
         </h2>
         {rooms.map((room) => (
-                 <div className='container'>
+                 <div className='container' key={room.id}>
                     {room.name}
                  </div>
         ))} 

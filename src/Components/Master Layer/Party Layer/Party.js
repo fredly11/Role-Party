@@ -9,8 +9,6 @@ const Party = ({party, users}) => {
         const id = rooms.length + 1
         const messages = []
         const newRoom = {id, name: addText, messages}
-        console.log(newRoom)
-        console.log(rooms)
         setRooms([...rooms, newRoom])
 
     }

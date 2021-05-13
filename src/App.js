@@ -5,11 +5,12 @@ import icon2 from './icon2.png'
 import { useState } from 'react'
 
 function App() {
+  const [activeParty, setActiveParty] = useState(0) 
   const parties = [
     {
       id: 1,
       name: 'Guards',
-      icon: <img src={icon1}/>,
+      icon: <img src={icon1} alt='icon1'/>,
       activeRoom: 0,
       users: [
         {
@@ -107,7 +108,7 @@ function App() {
     {
       id: 2,
       name: 'Blarg',
-      icon: <img src={icon2} />,
+      icon: <img src={icon2} alt='icon2'/>,
       activeRoom: 3,
       users: [
         {
@@ -203,12 +204,13 @@ function App() {
     ]
     }
   ]
-  const activeParty = 1;
+
+  console.log(activeParty)
 
   return (
     <div className='parent-container'>
       <Header party={parties[activeParty]} activeRoom={parties[activeParty].activeRoom}/>
-      <Parties key={parties.id} parties={parties} activeParty={activeParty} />
+      <Parties parties={parties} activeParty={activeParty} setActiveParty={setActiveParty} />
     </div>
   );
 }

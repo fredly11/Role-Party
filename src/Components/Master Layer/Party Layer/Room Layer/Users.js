@@ -5,7 +5,7 @@ const Users = ({users}) => {
                 Users
             </h2>
             {users.map((user) => (
-                    <div className='user-container'>
+                    <div key={user.id} className='user-container'>
                         {user.name}
                     </div>
             ))}

@@ -28,7 +28,7 @@ const Room = ({room, users}) => {
     return (
         <>
         <div className='main-container'>
-            <Messages key={room.id} messages={messages} messageText={messageText} setText={setText} onSend={onSend}/>
+            <Messages messages={messages} messageText={messageText} setText={setText} onSend={onSend}/>
         </div>
          <Users users={users} />
         </>
